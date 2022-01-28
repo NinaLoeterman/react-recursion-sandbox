@@ -1,0 +1,16 @@
+.folder {
+  margin: 10px;
+  border: 1px solid salmon;
+}
+
+.folder-container {
+  display: flex;
+
+  .caret-open {
+    transform: rotate(90deg);
+  }
+
+  .icon {
+    transition: all 0.2s;
+  }
+}
