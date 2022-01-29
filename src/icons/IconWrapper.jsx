@@ -14,7 +14,7 @@ const IconWrapper = ({ type, className }) => {
     folder: <FolderIcon />,
     file: <FileIcon />,
     jsx: <ReactIcon />,
-    js: <JavascriptIcon />
+    js: <JavascriptIcon />,
   };
 
   return mapTypeToIcon[type] ? (

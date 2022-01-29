@@ -1,6 +1,6 @@
 .folder {
   margin: 10px 0 0 20px;
-  animation-duration: .3s;
+  animation-duration: 0.3s;
   animation-name: slidein;
 }
 
@@ -15,7 +15,7 @@
 
 @keyframes slidein {
   from {
-    transform: scale(1, .5);
+    transform: scale(1, 0.5);
   }
 
   to {

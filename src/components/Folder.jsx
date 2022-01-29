@@ -4,7 +4,7 @@ import "./Folder.scss";
 
 const Folder = ({ name, items }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const props = {isOpen, name, items}
+  const props = { isOpen, name, items };
 
   const toggleFolder = () => {
     setIsOpen(!isOpen);
@@ -25,7 +25,7 @@ const Folder = ({ name, items }) => {
   );
 };
 
-const Icons = ({items, name, isOpen}) => {
+const Icons = ({ items, name, isOpen }) => {
   const isFolder = items?.length;
   if (isFolder) {
     return (
