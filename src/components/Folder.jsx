@@ -2,19 +2,23 @@ import React, { useState } from "react";
 import IconWrapper from '../icons/IconWrapper';
 import "./Folder.scss";
 
-const Folder = ({ currentIteration, folderTree }) => {
+const Folder = ({ name, items }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleFolder = () => {
     setIsOpen(!isOpen);
   };
 
-  return currentIteration > 5 ? null : (
+  return (
     <div className="folder">
       <div className="folder-container" onClick={toggleFolder}>
         <IconWrapper className={isOpen ? "caret-open" : ""} type='forwardArrow'/>
-        <span>Folder</span>
+        <span>{name}</span>
       </div>
-      <Folder isOpenFolder={false} folderTree={folderTree} currentIteration={++currentIteration} />
+      {isOpen && items?.map((item) => {
+        return (
+          <Folder key={item.id} name={item.name} items={item.items} />
+        )
+      })}
     </div>
   );
 };

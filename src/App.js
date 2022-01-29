@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Folder currentIteration={0} folderTree={mockData} />
+      <Folder {...mockData} />
     </div>
   );
 }
