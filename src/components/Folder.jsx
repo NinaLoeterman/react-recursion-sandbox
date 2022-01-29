@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IconWrapper from "../icons/IconWrapper";
+import { IconWrapper } from "../icons/IconWrapper.jsx";
 import "./Folder.scss";
 
 const Folder = ({ name, items }) => {

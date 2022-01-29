@@ -1,5 +1,7 @@
 .folder {
   margin: 10px 0 0 20px;
+  animation-duration: .3s;
+  animation-name: slidein;
 }
 
 .folder-container {
@@ -8,5 +10,15 @@
 
   .caret-open {
     transform: rotate(90deg);
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: scale(1, .5);
+  }
+
+  to {
+    transform: scale(1, 1);
   }
 }

@@ -16,4 +16,4 @@ const IconWrapper = ({ type, className }) => {
   );
 };
 
-export default IconWrapper;
+export { IconWrapper };
