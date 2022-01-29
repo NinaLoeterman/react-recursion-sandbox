@@ -10,7 +10,8 @@ const Folder = ({ name, items }) => {
   };
 
   const icons = () => {
-    if (items?.length) {
+    const isFolder = items?.length;
+    if (isFolder) {
       return (
         <>
           <IconWrapper
