@@ -12,10 +12,13 @@ const Folder = ({ name, items }) => {
     <div className="folder">
       <div className="folder-container" onClick={toggleFolder}>
         {items?.length ? (
-          <IconWrapper
-            className={isOpen ? "caret-open" : ""}
-            type="forwardArrow"
-          />
+          <>
+            <IconWrapper
+              className={isOpen ? "caret-open" : ""}
+              type="forwardArrow"
+            />
+            <IconWrapper type="folder" />
+          </>
         ) : (
           <IconWrapper type="file" />
         )}
