@@ -1,5 +1,11 @@
 import React from "react";
-import { ForwardArrow, FolderIcon, FileIcon } from ".";
+import {
+  ForwardArrow,
+  FolderIcon,
+  FileIcon,
+  JavascriptIcon,
+  ReactIcon,
+} from ".";
 import "./IconWrapper.scss";
 
 const IconWrapper = ({ type, className }) => {
@@ -7,6 +13,8 @@ const IconWrapper = ({ type, className }) => {
     forwardArrow: <ForwardArrow />,
     folder: <FolderIcon />,
     file: <FileIcon />,
+    jsx: <ReactIcon />,
+    js: <JavascriptIcon />
   };
 
   return mapTypeToIcon[type] ? (
