@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IconWrapper from '../icons/IconWrapper';
+import IconWrapper from "../icons/IconWrapper";
 import "./Folder.scss";
 
 const Folder = ({ name, items }) => {
@@ -11,14 +11,21 @@ const Folder = ({ name, items }) => {
   return (
     <div className="folder">
       <div className="folder-container" onClick={toggleFolder}>
-        <IconWrapper className={isOpen ? "caret-open" : ""} type='forwardArrow'/>
+        {items?.length ? (
+          <IconWrapper
+            className={isOpen ? "caret-open" : ""}
+            type="forwardArrow"
+          />
+        ) : (
+          <IconWrapper type="file" />
+        )}
         <span>{name}</span>
       </div>
-      {isOpen && items?.map((item) => {
-        return (
-          <Folder key={item.id} name={item.name} items={item.items} />
-        )
-      })}
+      {isOpen &&
+        items?.map((item) => {
+          const props = { key: item.id, name: item.name, items: item.items };
+          return <Folder {...props} />;
+        })}
     </div>
   );
 };
